@@ -1,3 +1,4 @@
+from json import loads
 from urllib.parse import urlencode
 
 from aiohttp import ClientSession
@@ -7,7 +8,8 @@ from regex import MULTILINE, search
 from .client_execptions import ClientError
 
 
-class LinkETrack:
+class LinkAndTrack:
+    __authorized: bool = True
     __regex_tracking_code: str = r'^\D{2}\d{9}\D{2}$'
     __regex_token: str = r'^[\d\D]{64}$'
     __token: str
@@ -30,6 +32,8 @@ class LinkETrack:
         :param tracking_code: Código de Rastreio.
         :return: Dados do rastreio.
         """
+        if not self.__authorized:
+            raise ClientError(mensagem='Usuário não autorizado!')
         await self.__check_tracking_code(tracking_code=tracking_code)
         url = await self.__create_url(tracking_code=tracking_code)
         return await self.__request(url=url)
@@ -48,8 +52,7 @@ class LinkETrack:
         }
         return f'{self.__url}{urlencode(params)}'
 
-    @staticmethod
-    async def __request(url: str) -> dict:
+    async def __request(self, url: str) -> dict:
         """
         Requisição para a API do Link&Track.
 
@@ -65,8 +68,11 @@ class LinkETrack:
                             + 'o número máximo de solicitações por minuto no '
                             + 'Link&Track!'
                         )
-                    data = await response.json()
-            return data
+                    data_text = await response.text()
+                    if data_text == 'Unauthorized':
+                        self.__authorized = False
+                        raise ClientError(mensagem='Usuário não autorizado!')
+            return loads(data_text)
         except ClientErrorAiohttp:
             return dict()
 
