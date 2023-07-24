@@ -1138,7 +1138,7 @@ six = ">=1.5"
 name = "python-dotenv"
 version = "1.0.0"
 description = "Read key-value pairs from a .env file and set them as environment variables"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.8"
 files = [
@@ -1525,4 +1525,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "3e5be41b04e8c0fa7adca8cbcabd69bc523892ff4227ec5248ce575286bc8134"
+content-hash = "4b60e66a2e07cc008701e929ebbb87021960be00bc415bd7db8d90698f4439b8"
