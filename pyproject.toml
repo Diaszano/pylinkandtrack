@@ -1,34 +1,53 @@
 [tool.poetry]
 name = "pylinkandtrack"
 version = "0.1.0"
-description = ""
+description = "Uma interface amigável para a API de rastreamento de encomendas dos Correios desenvolvida pela Link & Track."
 authors = ["diaszano <luucas.dsantos@gmail.com>"]
 readme = "README.md"
 packages = [{include="linkandtrack"}]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Portuguese (Brazilian)",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Adaptive Technologies",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Typing :: Typed"
+]
+
+[tool.poetry.urls]
+"Documentação" = ""
+"Código" = "https://github.com/Diaszano/pylinkandtrack"
+"Bug Tracker" = "https://github.com/Diaszano/pylinkandtrack/issues"
 
 [tool.poetry.dependencies]
 python = "^3.11"
 aiohttp = "^3.8.5"
 
-[tool.poetry.group.dev.dependencies]
-blue = "^0.9.1"
-isort = "^5.12.0"
+[tool.poetry.group.doc.dependencies]
+mkdocs-material = "^9.1.19"
+mkdocstrings = "^0.22.0"
+mkdocstrings-python = "^1.2.1"
 taskipy = "^1.11.0"
-python-dotenv = "^1.0.0"
+mkdocs-macros-plugin = "^1.0.2"
+jinja2 = "^3.1.2"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.0"
 pytest-cov = "^4.1.0"
 pytest-asyncio = "^0.21.1"
+python-dotenv = "^1.0.0"
+taskipy = "^1.11.0"
 
-[tool.poetry.group.doc.dependencies]
-mkdocs-material = "^9.1.19"
-mkdocstrings = "^0.22.0"
-mkdocstrings-python = "^1.2.1"
+[tool.poetry.group.lint.dependencies]
+blue = "^0.9.1"
+isort = "^5.12.0"
+taskipy = "^1.11.0"
 
 [build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 pythonpath = "."
@@ -42,6 +61,7 @@ line_length = 79
 lint = "blue --check --diff . && isort --check --diff ."
 lint-fix = "blue . && isort ."
 docs = "mkdocs serve"
+coverage = "coverage html"
 pre_test = "task lint"
-test = "pytest -s -x --cov=linketrack -vv"
-post_test = "coverage html"
+test = "pytest -s -x --cov=linkandtrack -vv"
+post_test = "task coverage"

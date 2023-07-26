@@ -1,0 +1,45 @@
+site_name: PyLinkAndTrack
+repo_url: https://github.com/Diaszano/pylinkandtrack
+repo_name: Diaszano/pylinkandtrack
+edit_uri: tree/main/docs
+
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/urso.png
+  favicon: assets/urso.png
+  palette:
+    primary: teal
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.tasklist
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+
+watch:
+  - linkandtrack
+
+plugins:
+  - macros
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [linkandtrack]
+
+extra:
+  vars:
+    name: PyLinkAndTrack
+    module: linkandtrack
+    project: pylinkandtrack
+    linketrack: "[Link&Track](https://linketrack.com/)"

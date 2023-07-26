@@ -1,37 +1,9 @@
-<header>
-    <div align="center">
-        <a href="https://github.com/Diaszano">
-            <img src=".github/assets/diaszano.png" alt="logo" height="300">
-        </a>
-        <h1>
-            PyLinkAndTrack
-        </h1>
-        Interface amigável da <a href="https://linketrack.com/">Link & Track</a>: simplifica rastreamento de encomendas 
-        nos Correios através de sua poderosa API.
-    </div>
-</header>
-
-## Como instalar o projeto?
-
-Para a instalação do projeto recomendamos que use o `pipx` para fazer essa instalação:
-
-```bash
-pipx install pylinkandtrack
-```
-
-Embora isso seja somente uma recomenda uma recomendação! Tu também podes instalar o projeto com o gerenciador de sua 
-preferência. Como `pip`:
-
-```bash
-pip install pylinkandtrack
-```
-
 ## Como usar?
 
-Este projeto se baseia nas funcionalidades oferecidas pela API do [Link&Track](https://linketrack.com/), que 
+Este projeto se baseia nas funcionalidades oferecidas pela API do {{ vars.linketrack }}, que 
 possibilita o rastreamento de encomendas, sujeito a limites de consultas por minuto.
 
-Em nossa implementação, todas as requisições à API do [Link&Track](https://linketrack.com/) são realizadas de forma 
+Em nossa implementação, todas as requisições à API do {{ vars.linketrack }} são realizadas de forma 
 assíncrona, proporcionando um desempenho otimizado em sua aplicação. Abaixo, apresentaremos como é possível realizar o 
 rastreamento de uma encomenda por meio da nossa interface:
 
@@ -73,4 +45,4 @@ result = {
 
 Desta forma, ao utilizar nossa interface, você poderá obter informações sobre o rastreamento de encomendas de maneira 
 eficiente e otimizada. Lembre-se de respeitar os limites de consultas por minuto estabelecidos pela API do 
-[Link&Track](https://linketrack.com/) para garantir o bom funcionamento do serviço.
+{{ vars.linketrack }} para garantir o bom funcionamento do serviço.
