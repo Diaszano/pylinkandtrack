@@ -59,6 +59,7 @@ line_length = 79
 lint = "blue --check --diff . && isort --check --diff ."
 lint-fix = "blue . && isort ."
 docs = "mkdocs serve"
+coverage = "coverage html"
 pre_test = "task lint"
 test = "pytest -s -x --cov=linkandtrack -vv"
-post_test = "coverage html"
+post_test = "task coverage"
