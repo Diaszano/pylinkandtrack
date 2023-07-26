@@ -5,7 +5,7 @@ from aiohttp import ClientSession
 from aiohttp.client_exceptions import ClientError as ClientErrorAiohttp
 from regex import MULTILINE, search
 
-from .client_execptions import ClientError
+from .client_exceptions import ClientError
 
 
 class LinkAndTrack:
