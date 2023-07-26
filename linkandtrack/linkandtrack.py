@@ -18,8 +18,12 @@ class LinkAndTrack:
 
     def __init__(self, user: str, token: str):
         """
-        :param user: Nome de usuário do Link&Track.
-        :param token: Token único do Link&Track.
+        Parameters:
+            user: Nome de usuário do Link&Track.
+            token: Token único do Link&Track.
+
+        Return:
+            Retorna uma instância da classe LinkAndTrack.
         """
         self.__user = user
         self.__token = token
@@ -27,10 +31,13 @@ class LinkAndTrack:
 
     async def tracker(self, tracking_code: str) -> dict:
         """
-        Rastreador de encomenda.
+        Realiza o rastreio do código informado.
 
-        :param tracking_code: Código de Rastreio.
-        :return: Dados do rastreio.
+        Parameters:
+            tracking_code: Código de Rastreio.
+
+        Return:
+            Dados do rastreio.
         """
         if not self.__authorized:
             raise ClientError(mensagem='Usuário não autorizado!')
@@ -40,10 +47,12 @@ class LinkAndTrack:
 
     async def __create_url(self, tracking_code: str) -> str:
         """
-        Cria a URL
+        Cria a URL que iremos utilizar para a fazer a requisição do rastreio.
 
-        :param tracking_code: Código de Rastreio.
-        :return: Retorna a URL que deve ser requisitada para fazer o rastreio.
+        Parameters:
+            tracking_code: Código de Rastreio.
+        Return:
+            Retorna a URL que deve ser requisitada para fazer o rastreio.
         """
         params: dict[str, str] = {
             'user': self.__user,
@@ -54,10 +63,12 @@ class LinkAndTrack:
 
     async def __request(self, url: str) -> dict:
         """
-        Requisição para a API do Link&Track.
+        Faz a requisição para a API do Link&Track.
 
-        :param url: URL que deve ser requisitada para fazer o rastreio.
-        :return: Retorna os dados do rastreio.
+        Parameters:
+            url: URL que deve ser requisitada para fazer o rastreio.
+        Return:
+            Retorna os dados do rastreio.
         """
         try:
             async with ClientSession() as session:
@@ -78,10 +89,12 @@ class LinkAndTrack:
 
     async def __check_tracking_code(self, tracking_code: str) -> None:
         """
-        Checa o código de rastreio.
+        Faz a verificação se o código de rastreio está no padrão aceito.
 
-        :param tracking_code: Código de Rastreio.
-        :return: Retorna True se o código é válido e False se inválido.
+        Parameters:
+            tracking_code: Código de Rastreio.
+        Return:
+            Retorna True se o código é válido e False se inválido.
         """
         result = search(
             pattern=self.__regex_tracking_code,
@@ -93,7 +106,7 @@ class LinkAndTrack:
 
     def __check_token(self) -> None:
         """
-        Verifica o Token do Usuário
+        Faz a verificação se o token está no padrão aceito.
         """
         result = search(
             pattern=self.__regex_token,
