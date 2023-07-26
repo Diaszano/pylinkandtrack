@@ -25,9 +25,13 @@ flowchart
 	client_exceptions --> client_error.py
 ```
 
-O código do CLI e da biblioteca estão em `notas_musicais`. A documentação da API do código também está sendo feita em `notas_musicais`. Com uso da ferramenta [mkdocstrings](https://mkdocstrings.github.io/) e seguem o padrão de [docstrings do google](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html). Então, caso altere alguma coisa no código, lembre-se de atualizar também as docstrings.
+O código da biblioteca estão em `linkandtrack`. A documentação da API do código também está sendo feita em 
+`linkandtrack`. Com uso da ferramenta [mkdocstrings](https://mkdocstrings.github.io/) e seguem o padrão de 
+[docstrings do google](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html). Então, caso altere 
+alguma coisa no código, lembre-se de atualizar também as docstrings.
 
-Os exemplos usados na docstring também estão sendo usados para testes. Então, caso altere o formato de saída, lembre-se de atualizar as docsintrgs.
+Os exemplos usados na docstring também estão sendo usados para testes. Então, caso altere o formato de saída, lembre-se 
+de atualizar as docsintrgs.
 
 
 ### Como clonar o repositório
