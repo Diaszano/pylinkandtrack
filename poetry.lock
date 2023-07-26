@@ -739,6 +739,28 @@ Markdown = ">=3.3"
 mkdocs = ">=1.1"
 
 [[package]]
+name = "mkdocs-macros-plugin"
+version = "1.0.2"
+description = "Unleash the power of MkDocs with macros and variables"
+category = "dev"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "mkdocs-macros-plugin-1.0.2.tar.gz", hash = "sha256:70687faff5c6c3a747a401b9c95954ac11421ce4194250eece33316174c3106a"},
+    {file = "mkdocs_macros_plugin-1.0.2-py3-none-any.whl", hash = "sha256:3894e98b673cdd032d10f99e7d379e3ab699070eb49bac2acfcd86ab961feb6b"},
+]
+
+[package.dependencies]
+jinja2 = "*"
+mkdocs = ">=0.17"
+python-dateutil = "*"
+pyyaml = "*"
+termcolor = "*"
+
+[package.extras]
+test = ["mkdocs-include-markdown-plugin", "mkdocs-macros-test", "mkdocs-material (>=6.2)"]
+
+[[package]]
 name = "mkdocs-material"
 version = "9.1.19"
 description = "Documentation that simply works"
@@ -1365,6 +1387,21 @@ psutil = ">=5.7.2,<6.0.0"
 tomli = {version = ">=2.0.1,<3.0.0", markers = "python_version >= \"3.7\" and python_version < \"4.0\""}
 
 [[package]]
+name = "termcolor"
+version = "2.3.0"
+description = "ANSI color formatting for output in terminal"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "termcolor-2.3.0-py3-none-any.whl", hash = "sha256:3afb05607b89aed0ffe25202399ee0867ad4d3cb4180d98aaf8eefa6a5f7d475"},
+    {file = "termcolor-2.3.0.tar.gz", hash = "sha256:b5b08f68937f138fe92f6c089b99f1e2da0ae56c52b78bf7075fd95420fd9a5a"},
+]
+
+[package.extras]
+tests = ["pytest", "pytest-cov"]
+
+[[package]]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
@@ -1525,4 +1562,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "15b6a6caf7b15555b392fec0f1c429343d179546d5a8b96302a1dc0cd17ec162"
+content-hash = "d0fcf2a3484fcf598aaa447cbab9ff5ad35c2c5bd7537226c65f282362879e9d"

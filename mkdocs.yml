@@ -8,6 +8,8 @@ theme:
   language: pt-BR
   logo: assets/urso.png
   favicon: assets/urso.png
+  palette:
+    primary: teal
 
 markdown_extensions:
   - attr_list
@@ -15,8 +17,16 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
+watch:
+  - linkandtrack
+
 plugins:
+  - macros
   - mkdocstrings:
       handlers:
         python:
           paths: [linkandtrack]
+
+extra:
+  vars:
+    projeto: pylinkandtrack
