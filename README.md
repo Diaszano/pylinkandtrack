@@ -4,7 +4,7 @@
             <img src=".github/assets/diaszano.png" alt="logo" height="300">
         </a>
         <h1>
-            PyLink&Track
+            PyLinkAndTrack
         </h1>
         Interface amigável da <a href="https://linketrack.com/">Link & Track</a>: simplifica rastreamento de encomendas nos Correios através de sua poderosa API.
     </div>
