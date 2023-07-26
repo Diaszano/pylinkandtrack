@@ -25,21 +25,23 @@ classifiers = [
 python = "^3.11"
 aiohttp = "^3.8.5"
 
-[tool.poetry.group.dev.dependencies]
-blue = "^0.9.1"
-isort = "^5.12.0"
-taskipy = "^1.11.0"
-
 [tool.poetry.group.doc.dependencies]
 mkdocs-material = "^9.1.19"
 mkdocstrings = "^0.22.0"
 mkdocstrings-python = "^1.2.1"
+taskipy = "^1.11.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.0"
 pytest-cov = "^4.1.0"
 pytest-asyncio = "^0.21.1"
 python-dotenv = "^1.0.0"
+taskipy = "^1.11.0"
+
+[tool.poetry.group.lint.dependencies]
+blue = "^0.9.1"
+isort = "^5.12.0"
+taskipy = "^1.11.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -58,5 +60,5 @@ lint = "blue --check --diff . && isort --check --diff ."
 lint-fix = "blue . && isort ."
 docs = "mkdocs serve"
 pre_test = "task lint"
-test = "pytest -s -x --cov=linketrack -vv"
+test = "pytest -s -x --cov=linkandtrack -vv"
 post_test = "coverage html"
