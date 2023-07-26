@@ -49,3 +49,6 @@ jobs:
 
       - name: Roda os testes
         run: task test
+        env:
+          USER_LINKETRACK: ${{ secrets.USER_LINKETRACK }}
+          TOKEN_LINKETRACK: ${{ secrets.TOKEN_LINKETRACK }}
