@@ -51,6 +51,8 @@ async def test_unauthorized_user():
     )
     with raises(ClientError):
         await linketrack.tracker(tracking_code='LX632045407CN')
+    with raises(ClientError):
+        await linketrack.tracker(tracking_code='LX632045407CN')
 
 
 @mark.asyncio
