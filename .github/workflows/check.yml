@@ -47,5 +47,5 @@ jobs:
       - name: Instala as dependências
         run: poetry install --with test
 
-      - name: Roda o lint
-        run: pytest -s -x --cov=linketrack -vv
+      - name: Roda os testes
+        run: pytest -s -x -vv
