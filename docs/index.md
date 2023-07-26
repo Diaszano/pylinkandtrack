@@ -1,7 +1,8 @@
 ![Logo do Diaszano](assets/logo01.png){width="300" .center}
-# PyLinkAndTrack
+# {{ vars.name }}
 
-Interface amigável da [Link & Track](https://linketrack.com/): simplificando rastreamento de encomendas nos Correios através de sua poderosa API.
+Interface amigável da {{ vars.linketrack }}: simplificando rastreamento de encomendas nos Correios através de sua 
+poderosa API.
 
 {% include "templates/cards.html" %}
 

@@ -1,9 +1,9 @@
 # Tutorial
 
-Se tu chegou até aqui, significa que quer aprender mais sobre o `PyLinkAndTrack`
+Se tu chegou até aqui, significa que quer aprender mais sobre o `{{ vars.name }}`
 
 O propósito primordial deste projeto consiste em desenvolver uma interface otimizada para a API disponibilizada pelo 
-[Link&Track](https://linketrack.com/), a fim de proporcionar aos usuários uma experiência simplificada. Através dessa 
+{{ vars.linketrack }}, a fim de proporcionar aos usuários uma experiência simplificada. Através dessa 
 interface, requer-se apenas o fornecimento do login e do código de rastreamento, permitindo assim o acesso e obtenção 
 dos dados referentes à encomenda de maneira ágil e eficiente.
 

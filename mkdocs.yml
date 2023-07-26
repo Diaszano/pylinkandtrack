@@ -39,4 +39,7 @@ plugins:
 
 extra:
   vars:
-    projeto: pylinkandtrack
+    name: PyLinkAndTrack
+    module: linkandtrack
+    project: pylinkandtrack
+    linketrack: "[Link&Track](https://linketrack.com/)"

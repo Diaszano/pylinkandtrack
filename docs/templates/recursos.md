@@ -1,9 +1,9 @@
-# Como usar?
+## Como usar?
 
-Este projeto se baseia nas funcionalidades oferecidas pela API do [Link&Track](https://linketrack.com/), que 
+Este projeto se baseia nas funcionalidades oferecidas pela API do {{ vars.linketrack }}, que 
 possibilita o rastreamento de encomendas, sujeito a limites de consultas por minuto.
 
-Em nossa implementação, todas as requisições à API do [Link&Track](https://linketrack.com/) são realizadas de forma 
+Em nossa implementação, todas as requisições à API do {{ vars.linketrack }} são realizadas de forma 
 assíncrona, proporcionando um desempenho otimizado em sua aplicação. Abaixo, apresentaremos como é possível realizar o 
 rastreamento de uma encomenda por meio da nossa interface:
 
@@ -45,4 +45,4 @@ result = {
 
 Desta forma, ao utilizar nossa interface, você poderá obter informações sobre o rastreamento de encomendas de maneira 
 eficiente e otimizada. Lembre-se de respeitar os limites de consultas por minuto estabelecidos pela API do 
-[Link&Track](https://linketrack.com/) para garantir o bom funcionamento do serviço.
+{{ vars.linketrack }} para garantir o bom funcionamento do serviço.
