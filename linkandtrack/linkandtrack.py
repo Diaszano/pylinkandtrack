@@ -1,12 +1,3 @@
-from json import loads
-from urllib.parse import urlencode
-
-from aiohttp import ClientSession
-from aiohttp.client_exceptions import ClientError as ClientErrorAiohttp
-from regex import MULTILINE, search
-
-from .client_exceptions import ClientError
-
 
 class LinkAndTrack:
     __authorized: bool = True
