@@ -11,6 +11,11 @@
     </div>
 </header>
 
+[![Documentation Status](https://readthedocs.org/projects/pylinkandtrack/badge/?version=latest)](https://pylinkandtrack.readthedocs.io/en/latest/?badge=latest)
+[![CI](https://github.com/Diaszano/pylinkandtrack/actions/workflows/check.yaml/badge.svg)](https://github.com/Diaszano/pylinkandtrack/actions/workflows/check.yaml)
+[![codecov](https://codecov.io/gh/Diaszano/pylinkandtrack/branch/master/graph/badge.svg?token=VfeUJcEGI7)](https://codecov.io/gh/Diaszano/pylinkandtrack)
+[![PyPI version]()]()
+
 ## Como instalar o projeto?
 
 Para a instalação do projeto recomendamos que use o `pipx` para fazer essa instalação:
