@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Uma interface amigável para a API de rastreamento de encomendas dos Correios desenvolvida pela Link & Track."
 authors = ["diaszano <luucas.dsantos@gmail.com>"]
 readme = "README.md"
+license = "MIT"
 packages = [{include="linkandtrack"}]
 classifiers = [
     "Development Status :: 4 - Beta",
