@@ -28,6 +28,7 @@ jobs:
         run: task lint
 
   tests:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Verifica o código
