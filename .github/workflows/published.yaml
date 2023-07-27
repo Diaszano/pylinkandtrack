@@ -1,0 +1,35 @@
+name: Upload Python Package
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verifica o código
+        uses: actions/checkout@v3
+
+      - name: Configura o Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ vars.PYTHON_VERSION }}
+
+      - name: Instala o Poetry
+        run: pip install poetry
+
+      - name: Configura o Poetry
+        run: poetry config virtualenvs.create false
+
+      - name: Instala as dependências
+        run: poetry install --no-dev
+
+      - name: Build package
+        run: poetry publish --build
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
