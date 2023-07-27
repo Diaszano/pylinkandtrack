@@ -16,7 +16,6 @@
 [![codecov](https://codecov.io/gh/Diaszano/pylinkandtrack/branch/master/graph/badge.svg?token=VfeUJcEGI7)](https://codecov.io/gh/Diaszano/pylinkandtrack)
 [![PyPI version](https://badge.fury.io/py/pylinkandtrack.svg)](https://badge.fury.io/py/pylinkandtrack)
 
-
 ## Como instalar o projeto?
 
 Para a instalação do projeto recomendamos que use o `pipx` para fazer essa instalação:
