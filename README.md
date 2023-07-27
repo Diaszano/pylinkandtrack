@@ -1,7 +1,7 @@
 <header>
     <div align="center">
         <a href="https://github.com/Diaszano">
-            <img src=".github/assets/diaszano.png" alt="logo" height="300">
+            <img src="https://pylinkandtrack.readthedocs.io/en/latest/assets/logo02.png" alt="logo" height="300">
         </a>
         <h1>
             PyLinkAndTrack
@@ -14,7 +14,8 @@
 [![Documentation Status](https://readthedocs.org/projects/pylinkandtrack/badge/?version=latest)](https://pylinkandtrack.readthedocs.io/en/latest/?badge=latest)
 [![CI](https://github.com/Diaszano/pylinkandtrack/actions/workflows/check.yaml/badge.svg)](https://github.com/Diaszano/pylinkandtrack/actions/workflows/check.yaml)
 [![codecov](https://codecov.io/gh/Diaszano/pylinkandtrack/branch/master/graph/badge.svg?token=VfeUJcEGI7)](https://codecov.io/gh/Diaszano/pylinkandtrack)
-[![PyPI version]()]()
+[![PyPI version](https://badge.fury.io/py/pylinkandtrack.svg)](https://badge.fury.io/py/pylinkandtrack)
+
 
 ## Como instalar o projeto?
 
