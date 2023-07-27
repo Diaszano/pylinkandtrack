@@ -17,7 +17,7 @@ classifiers = [
 ]
 
 [tool.poetry.urls]
-"Documentação" = ""
+"Documentação" = "https://pylinkandtrack.readthedocs.io/en/latest/"
 "Código" = "https://github.com/Diaszano/pylinkandtrack"
 "Bug Tracker" = "https://github.com/Diaszano/pylinkandtrack/issues"
 
