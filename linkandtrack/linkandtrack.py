@@ -1,13 +1,9 @@
 from json import loads
 from urllib.parse import urlencode
-
 from aiohttp import ClientSession
 from aiohttp.client_exceptions import ClientError as ClientErrorAiohttp
 from regex import MULTILINE, search
-
 from .client_exceptions import ClientError
-
-
 class LinkAndTrack:
     __authorized: bool = True
     __regex_tracking_code: str = r'^\D{2}\d{9}\D{2}$'
